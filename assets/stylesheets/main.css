@@ -1,52 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 /*
   ========================================
   Custom styles
@@ -57,8 +8,6 @@ background: #1d3557;
 	color: #457b9d;
 	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-
 
 /*
   ========================================
@@ -132,7 +81,7 @@ background: #1d3557;
 .row {
 	background: #fff;
 	width: 100%;
-	padding: 66px 0 44px 0;
+	padding: 4.125rem 0 2.75rem 0;
 }
 
 .row-alt {
@@ -140,7 +89,7 @@ background: #1d3557;
    background: -webkit-linear-gradient(to right, #f1faee, #a8dadc);
    background: -moz-linear-gradient(to right, #f1faee, #a8dadc);
    background: linear-gradient(to right, #f1faee, #a8dadc);
-   padding: 44px 0 22px 0;
+   padding: 2.75rem 0 1.375rem 0;
  }
 
 
@@ -149,37 +98,46 @@ background: #1d3557;
   Primary header
   ========================================
 */
+.header-section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.tagline, .logo {
+	flex: 0 0 25%;
+}
 
 .logo {
-	border-top: 4px solid #e63946;
-	padding: 40px 0 25px 0;
-  float: left;
+	border-top: 0.25rem solid #e63946;
+	padding: 2.5rem 0 1.563rem 0;
+  	float: left;
 	font-size: 3rem;
 	font-weight: 100;
-	letter-spacing: .5px;
-	line-height: 44px;
-	padding: 40px 0 22px 0;
+	letter-spacing: 0.031rem;
+	line-height: 2.75rem;
+	padding: 2.5rem 0 1.375rem 0;
 	text-transform: uppercase;
 }
 
 .tagline {
-	margin: 66px 0 22px 0;
+	margin: 1.375rem 0;
 	text-align: right;
-	line-height: 25px;
+	line-height: 1.563rem;
 }
 
 .primary-nav {
 	font-size: 0.875rem;
 	font-weight: 400;
-	letter-spacing: .5px;
+	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 }
 
-.nav li {
+/* .nav li {
   display: inline-block;
   margin: 0 10px;
   vertical-align: top;
-}
+} */
+
 .nav li:last-child {
   margin-right: 0;
 }
@@ -191,21 +149,27 @@ background: #1d3557;
 */
 
 h1, h3, h4, h5, p {
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
 }
 
 h1, h2, h3, h4 {
 	color: #e63946;
 }
 
-h1 {
-	font-size: 2.25rem;
-	line-height: 44px;
+/* h1 {
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 2.75rem;
+} */
+
+.content-title {
+	font-size: 1.2rem;
+	font-weight: 400;
 }
 
 h2 {
 	font-size: 1.5rem;
-	line-height: 44px;
+	line-height: 2.75rem;
 }
 
 h3 {
@@ -242,7 +206,7 @@ cite, em {
 }
 .lead p {
   font-size: 1.313rem;
-  line-height: 33px;
+  line-height: 2.063rem;
 }
 
 /*
@@ -265,7 +229,7 @@ a {
 }
 
 p a {
-	border-bottom: 1px solid #dfe2e5;
+	border-bottom: 0.063rem solid #dfe2e5;
 }
 
 .primary-header a,
@@ -284,19 +248,19 @@ p a {
 */
 
 .btn {
-  border-radius: 5px;
+  border-radius: 0.313rem;
 	color: #fff;
 	cursor: pointer;
   display: inline-block;
 	font-weight: 400;
-	letter-spacing: .5px;
+	letter-spacing: 0.031rem;
   margin: 0;
 	text-transform: uppercase;
 }
 
 .btn-alt {
   border: 1px solid #fff;
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
 }
 
 .btn-alt:hover {
@@ -307,7 +271,7 @@ p a {
 .btn-default {
 	border: 0;
 	background: #1d3557;
-	padding: 11px 30px;
+	padding: 0.688rem 1.875rem;
 	font-size: 0.875rem;
 }
 
@@ -323,8 +287,8 @@ p a {
 
 .hero {
 	color: #fff;
-	line-height: 44px;
-  padding: 22px 80px 66px 80px;
+	line-height: 2.75rem;
+  padding: 1.375rem 5rem 4.125rem 5rem;
 	text-align: center;
 }
 
@@ -339,7 +303,7 @@ p a {
 }
 
 .teaser img {
-	border-radius: 5px;
+	border-radius: 0.313rem;
 	display: block;
 	margin: 5% 0;
 	max-width: 100%;
@@ -362,17 +326,18 @@ p a {
 .primary-footer {
 	color: #457b9d;
 	font-size: 0.875rem;
-	padding-bottom: 44px;
-	padding-top: 44px;
+	padding-bottom: 2.75rem;
+	padding-top: 2.75rem;
+	text-align: center;
+	line-height: 1.5;
 }
 
-.primary-footer small {
+/* .primary-footer small {
   float: left;
-	font-weight: 400;
-}
+font-weight: 400;
+} */
 
-/* 
-.footer-nav {
+/* .footer-nav {
 	display: flex;
 	justify-content: flex-end;
 } */
@@ -401,6 +366,18 @@ padding: 10px;
 margin-bottom: 44px;
 }
 
+.speaker p {
+	line-height: 1.75;
+}
+
+.speaker h5 {
+	padding-top: 1rem;
+}
+
+.speaker h2 {
+	font-size: 1.25rem;
+}
+
 .speaker-info img {
 	border-radius: 50%;
 	height: 130px;
@@ -416,28 +393,34 @@ margin-bottom: 44px;
 */
 
 table {
-	margin-bottom: 44px;
+	margin-bottom: 2.75rem;
 	width: 100%;
+	/* border-collapse: separate;
+	border-spacing: 0 15px; */
 }
 
 table:last-child {
 	margin-bottom: 0;
 }
 
-th,
-td {
-	padding-bottom: 22px;
-	vertical-align: top;
+.schedule-one {
+	margin-bottom: 1.75rem;
 }
 
 th {
-	padding-right: 45px;
-	text-align: right;
+	/* padding-right: 2.75rem; */
+	/* text-align: right; */
 	width: 20%;
 }
 
 td {
 	width: 40%;
+	padding-bottom: 1rem;
+	/* vertical-align: top; */
+}
+
+.table-container {
+	display: table-cell;
 }
 
 thead {
@@ -459,11 +442,11 @@ tbody th {
 
 tbody td {
 	border-top: 1px solid #457b9d;
-	padding-top: 21px;
+	padding: 10px 0;
 }
 
-tbody td:first-of-type {
-	padding-right: 15px;
+td:first-of-type {
+	padding: 0 0 15px;
 }
 
 tbody td:last-of-type {
@@ -486,45 +469,42 @@ table h4{
 .schedule-offset {
 	color: #e63946;
 }
+
+.schedule-title {
+	padding-right: 5px;
+}
 /*
   ========================================
   Navigation
   ========================================
 */
 
-.nav {
-  text-align: right;
+nav ul {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-content: flex-end;
 }
 
-.hamburger {
-	display: none;
+nav ul li {
+	display: inline-block;
 }
 
-/* .bar {
+nav ul li a {
 	display: block;
-	width: 25px;
-	height: 3px;
-	margin: 5px auto;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	background: white;
-} */
-
-.nav-menu {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
+nav li {
+	flex-direction: row;
+}
 
 /*
   ========================================
   Venue
   ========================================
 */
+.venue {
+	line-height: 1.6;
+}
 
 .venue-theatre {
 	margin-bottom: 66px;
@@ -543,6 +523,16 @@ table h4{
   Register
   ========================================
 */
+.conference-info {
+line-height: 1.6;
+text-align: center;
+margin: auto;
+width: 50%;
+}
+
+.conference-info li {
+	list-style-position: inside;
+}
 
 .why-attend {
   list-style: square;
@@ -584,7 +574,86 @@ input, select, textarea {
   height: 10%;
 }
 
-/* Small Screens */
+/*---------------------------------
+MOBILE MENU STYLES
+-----------------------------------*/
+.nav-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-menu li a{
+    display: block;
+    padding: 15px 5px;
+}
+
+.toggle {
+	order: 1;
+	font-size: 1.25rem;
+}
+
+.nav-item {
+	order: 3;
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+.active .nav-item {
+	display: block;
+}
+
+/*---------------------------------
+TABLET MENU STYLES
+-----------------------------------*/
+@media all and (min-width: 700px){
+    .nav-menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+}
+
+@media only screen and (max-width:320px) {
+	.header-section {
+		  flex-direction: column;
+	}
+	.logo, .tagline {
+		flex: 0 0 100%;
+		}
+}
+
+/*---------------------------------
+DESKTOP MENU STYLES
+-----------------------------------*/
+@media all and (min-width: 960px){
+    .nav-menu {
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        background: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .nav-item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+}
+
 @media all and (max-width: 700px) {
 .col-1-3 {
 	float: none;
@@ -596,7 +665,7 @@ input, select, textarea {
 }
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
 	.nav-menu {
 		position: fixed;
 		left: -100%;
@@ -621,5 +690,4 @@ input, select, textarea {
 .hamburger {
 	display: block;
 	cursor: pointer;
-}
-}
+}*/
